@@ -1,0 +1,91 @@
+/* ===== الألوان والخط ===== */
+:root {
+  --primary: #1f5a7a;
+  --primary-dark: #143e55;
+  --accent: #d98a2b;
+  --text: #2a2420;
+  --muted: #6b625b;
+  --bg-alt: #faf5ef;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Cairo', sans-serif; color: var(--text); line-height: 1.9; background: #fff; }
+.container { width: min(1100px, 92%); margin: 0 auto; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ===== الشريط العلوي ===== */
+.nav { position: sticky; top: 0; z-index: 10; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+.logo { font-weight: 800; font-size: 1.35rem; color: var(--primary); text-decoration: none; }
+.nav nav a { margin-inline-start: 22px; color: var(--text); text-decoration: none; font-weight: 600; padding-bottom: 4px; }
+.nav nav a.active, .nav nav a:hover { color: var(--accent); border-bottom: 2px solid var(--accent); }
+
+/* ===== الأزرار ===== */
+.btn {
+  display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+  padding: 11px 28px; border-radius: 30px; font-weight: 700; transition: transform .2s, background .2s;
+}
+.btn:hover { transform: translateY(-2px); background: #c27620; }
+.btn-outline { background: transparent; border: 2px solid #fff; }
+.btn-outline:hover { background: rgba(255,255,255,.15); }
+
+/* ===== الواجهة ===== */
+.hero {
+  background: var(--primary-dark) url("assets/images/hero.webp") center / cover no-repeat;
+  color: #fff; text-align: center; padding: 110px 0;
+}
+.hero h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.5; }
+.hero p { max-width: 620px; margin: 16px auto 28px; font-size: 1.1rem; opacity: .95; }
+.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+.page-head { background: var(--primary); color: #fff; text-align: center; padding: 60px 0; }
+.page-head h1 { font-size: 2.2rem; }
+.page-head p { opacity: .9; }
+
+/* ===== الأقسام ===== */
+.section { padding: 70px 0; }
+.section.alt { background: var(--bg-alt); }
+.section h2 { font-size: 1.9rem; color: var(--primary); margin-bottom: 20px; }
+.lead { font-size: 1.1rem; color: var(--muted); max-width: 800px; }
+.center { text-align: center; margin-top: 40px; }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+.feature { background: #fff; border-radius: 14px; padding: 26px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,.05); }
+.feature span { font-size: 2.2rem; }
+.feature h3 { margin: 8px 0 4px; color: var(--primary); }
+.feature p { color: var(--muted); }
+
+/* ===== بطاقات الخدمات ===== */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.08); transition: transform .2s; }
+.card:hover { transform: translateY(-4px); }
+.card-body { padding: 20px 22px 24px; }
+.card h3 { color: var(--primary); font-size: 1.25rem; margin-bottom: 6px; }
+.card p { color: var(--muted); }
+
+/* ===== التواصل ===== */
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
+.contact-box { background: var(--bg-alt); border-radius: 16px; padding: 30px; text-align: center; }
+.contact-box span { font-size: 2.2rem; }
+.contact-box h3 { color: var(--primary); margin: 6px 0; }
+.contact-box p { color: var(--muted); margin-bottom: 12px; }
+.ltr { direction: ltr; }
+.note { font-size: .9rem; }
+
+/* ===== زر واتساب العائم ===== */
+.wa-float {
+  position: fixed; bottom: 20px; left: 20px; z-index: 20;
+  background: #25d366; color: #fff; text-decoration: none; font-weight: 700;
+  padding: 12px 20px; border-radius: 30px; box-shadow: 0 6px 18px rgba(0,0,0,.2);
+}
+
+.footer { background: var(--primary-dark); color: #cfdde5; text-align: center; padding: 20px 0; font-size: .9rem; }
+
+/* ===== الجوال ===== */
+@media (max-width: 640px) {
+  .logo { font-size: 1.1rem; }
+  .nav nav a { margin-inline-start: 12px; font-size: .92rem; }
+  .hero { padding: 70px 0; }
+  .hero h1 { font-size: 1.8rem; }
+  .section { padding: 50px 0; }
+}
